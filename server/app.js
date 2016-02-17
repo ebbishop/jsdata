@@ -34,8 +34,8 @@ app.use(flash());
 
 
 
-app.use('/api/posts', require('./posts'));
-app.use('/api/users', require('./users'));
+app.use('/api/posts', require('./posts')); //get, post, delete
+app.use('/api/users', require('./users')); //get, post
 
 app.get('/*', function(req, res) {
 	res.sendFile(indexHtmlPath);
