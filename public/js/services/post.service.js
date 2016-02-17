@@ -10,7 +10,7 @@ app.factory('Post', function(DS, $state) {
 
           localField: '_author', //this is the entire author object (user instance). if the author is in the cache, it will be populated.
 
-          localKey: 'author' //this is an id Post has key, which is Id of user
+          localKey: 'author' //this is an id; Post has key, which is Id of user
 
           // foreign vs. local: where is the key that connects the two models? I have it: local other has it: foreign
 
@@ -41,6 +41,3 @@ app.factory('Post', function(DS, $state) {
 	*/
 
 }).run(function(Post){});
-
-
-Post.go()
