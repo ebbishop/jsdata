@@ -10,8 +10,16 @@ app.config(function($stateProvider) {
 })
 
 // add necessary dependencies here
-app.controller('SignupCtrl', function($scope) {
+app.controller('SignupCtrl', function($scope, User, $state) {
 
+  $scope.sendSignup = function(signup) {
+    User.create(signup)
+    .then (function(newUser){
+      $state.go('create', {userId: newUser._id})
+    })
+
+    
+  }
 
   /*
   TODOS: 

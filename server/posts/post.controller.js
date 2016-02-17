@@ -23,6 +23,7 @@ module.exports = {
   },
 
   create: function(req, res, next){
+    console.log("We are in the post ROUTE: ", req.body)
     Post.create(req.body)
     .then(function(article) {
       res.json(article);
